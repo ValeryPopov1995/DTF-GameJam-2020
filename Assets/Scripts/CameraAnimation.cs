@@ -6,7 +6,7 @@ public class CameraAnimation : MonoBehaviour
 
     private void Update()
     {
-        float magnitude = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).magnitude;
+        float magnitude = new Vector2(0, Input.GetAxis("Vertical")).magnitude;
         CameraAnimator.SetFloat("CameraState", magnitude);
     }
 }

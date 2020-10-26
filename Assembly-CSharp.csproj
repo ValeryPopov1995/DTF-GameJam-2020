@@ -64,8 +64,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraAnimation.cs" />
+    <Compile Include="Assets\Scripts\InteractableObject.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\PlayerInteraction.cs" />
     <Compile Include="Assets\Scripts\PlayerMovenment.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\StoryTrigger.cs" />
+    <Compile Include="Assets\Scripts\StoryVoids.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <None Include="Assets\OtherAssets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
@@ -121,12 +126,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/UnityProjects/DTF GameJam 2020/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>D:/UnityProjects/DTF GameJam 2020/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>D:/UnityProjects/DTF GameJam 2020/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/2019.3.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
