@@ -1,6 +1,4 @@
-﻿using System.Security.Policy;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -9,6 +7,7 @@ public class PauseMenu : MonoBehaviour
     private void Start()
     {
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
