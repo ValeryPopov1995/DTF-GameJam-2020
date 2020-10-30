@@ -8,25 +8,34 @@ public class StoryVoids : MonoBehaviour
     public GameObject TVEnterTrigger, TVWeatherNews, Groza;
     public InteractableObject Korzina, Fonarik;
 
-    public static int NetFounded = 0, GarbageFounded = 0, WindowClosed = 0;
+    public static int NetFounded = 0, GarbageFounded = 0, WindowClosed = 0, killed = 0;
+    [Space]
+    public AudioClip net;
+    public AudioClip fonarikClip, garbageSpeach;
 
-    /*void PlayStory(AudioClip clip)
+    AudioSource so;
+
+    private void Start()
     {
-        AudioSource source = GetComponent<AudioSource>();
-        source.clip = clip;
-        source.Play();
-    }*/
+        so = GetComponent<AudioSource>();
+    }
 
     public void AddFoundedNet()
     {
         NetFounded++;
         TaskText.text = "Еще осталась где-то паутина!";
         Debug.Log(NetFounded + " nets founded");
+        eff(net);
 
         if (NetFounded == Nets.Length) // start garbage
         {
             foreach (var item in Garbage) item.isActive = true;
             TaskText.text = "пора собрать все вещи, которые воляются по квартире";
+
+            var speach = FindObjectOfType<PlayerMovenment>().GetComponent<AudioSource>();
+            speach.clip = garbageSpeach;
+            speach.Play();
+
             if (TVEnterTrigger != null) TVEnterTrigger.SetActive(true);
             FindObjectOfType<SunBaheviour>().SunAngle = 50;
         }
@@ -54,8 +63,14 @@ public class StoryVoids : MonoBehaviour
 
     public void StartStorm()
     {
-        FindObjectOfType<SunBaheviour>().SunAngle = 10;
+        FindObjectOfType<SunBaheviour>().SunAngle = 0;
         if (Groza != null) Groza.SetActive(true);
         Fonarik.isActive = true;
+    }
+
+    public void eff(AudioClip clip)
+    {
+        so.clip = clip;
+        so.Play();
     }
 }

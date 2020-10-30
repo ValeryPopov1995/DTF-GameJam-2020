@@ -63,47 +63,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\CameraAnimation.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\FlashlightWeapon.cs" />
     <Compile Include="Assets\Scripts\InteractableObject.cs" />
     <Compile Include="Assets\Scripts\LightNoise.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
-    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
-    <Compile Include="Assets\Scripts\PlayerInteraction.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovenment.cs" />
+    <Compile Include="Assets\Scripts\Player\CameraAnimation.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerInteraction.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerLight.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerMovenment.cs" />
     <Compile Include="Assets\Scripts\SimpleAction.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\StormBaheviour.cs" />
     <Compile Include="Assets\Scripts\StoryTrigger.cs" />
     <Compile Include="Assets\Scripts\StoryVoids.cs" />
     <Compile Include="Assets\Scripts\SunBaheviour.cs" />
+    <Compile Include="Assets\VictoryAnimation.cs" />
     <None Include="Assets\OtherAssets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
-    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-      <HintPath>D:/UnityProjects/DTF GameJam 2020/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/UnityProjects/DTF GameJam 2020/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-      <HintPath>D:/UnityProjects/DTF GameJam 2020/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>D:/UnityProjects/DTF GameJam 2020/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Editor">
-      <HintPath>D:/UnityProjects/DTF GameJam 2020/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>D:/UnityProjects/DTF GameJam 2020/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/UnityProjects/DTF GameJam 2020/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-      <HintPath>D:/UnityProjects/DTF GameJam 2020/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Editor">
-      <HintPath>D:/UnityProjects/DTF GameJam 2020/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>D:/UnityProjects/DTF GameJam 2020/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
@@ -120,17 +105,8 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:/UnityProjects/DTF GameJam 2020/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>D:/UnityProjects/DTF GameJam 2020/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>D:/UnityProjects/DTF GameJam 2020/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>D:/UnityProjects/DTF GameJam 2020/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>D:/UnityProjects/DTF GameJam 2020/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/UnityProjects/DTF GameJam 2020/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>

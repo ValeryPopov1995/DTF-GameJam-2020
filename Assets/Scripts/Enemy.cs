@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     PlayerHealth hp;
     Animator anim;
 
+    bool desteny = true, killed = false;
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -26,6 +28,27 @@ public class Enemy : MonoBehaviour
     {
         float dis = Vector3.Distance(transform.position, hp.transform.position);
         if (dis < DistanceToStartAttack) anim.SetTrigger("shoot");
-        else agent.SetDestination(hp.transform.position);
+        else if (desteny) agent.SetDestination(hp.transform.position);
+        else agent.isStopped = true;
+    }
+
+    public void Death()
+    {
+        if (!killed)
+        {
+            killed = true;
+
+            desteny = false;
+            anim.SetTrigger("death");
+            StoryVoids.killed++;
+            if (StoryVoids.killed == 5)
+            {
+                FindObjectOfType<PlayerHealth>().SpeachPlay(FindObjectOfType<PlayerHealth>().PobedClip);
+
+                VictoryAnimation.AnimateVictory();
+
+            }
+            Destroy(gameObject, 5f);
+        }
     }
 }

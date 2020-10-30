@@ -54,6 +54,14 @@ public class InteractableObject : MonoBehaviour
 
             case Mode.garbage:
                 story.AddFoundedGarnage();
+
+                if (PlayerSpeach != null)
+                {
+                    var speach = FindObjectOfType<PlayerMovenment>().GetComponent<AudioSource>();
+                    speach.clip = PlayerSpeach;
+                    speach.Play();
+                }
+
                 gameObject.SetActive(false);
                 break;
 
@@ -80,11 +88,13 @@ public class InteractableObject : MonoBehaviour
 
             case Mode.activateRainTask:
                 Object.SetActive(true);
+                story.TaskText.text = "надо закрыть все окна!";
                 break;
 
             case Mode.fonarik:
                 Object.SetActive(true);
                 gameObject.SetActive(false);
+                story.eff(story.fonarikClip);
                 break;
 
             default:
@@ -94,9 +104,10 @@ public class InteractableObject : MonoBehaviour
         AudioSource source = GetComponent<AudioSource>();
         if (source != null && PlayAudio) source.Play();
         else if (source != null && AudioArray.Length != 0) StartCoroutine(PlayAudioArray());
-        if (DisableAfter) this.enabled = false;
-
+        
         if (PlayerSpeach != null) StartCoroutine(PlaySpeach(WaitForSpeach));
+
+        if (DisableAfter) enabled = false;
     }
 
     IEnumerator PlayAudioArray()
@@ -121,6 +132,10 @@ public class InteractableObject : MonoBehaviour
     void WindowAnimationEvent()
     {
         StoryVoids.WindowClosed++;
-        if (StoryVoids.WindowClosed == 5) story.StartStorm();
+        if (StoryVoids.WindowClosed == 5)
+        {
+            story.StartStorm();
+            FindObjectOfType<PlayerHealth>().SpeachPlay(FindObjectOfType<PlayerHealth>().GdeFonarik);
+        }
     }
 }
