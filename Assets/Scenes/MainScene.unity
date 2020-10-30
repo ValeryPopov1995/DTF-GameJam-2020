@@ -940,7 +940,7 @@ MonoBehaviour:
   RunSpeed: 7
   SeetSpeed: 1
   JumpForce: 4
-  Sensitivity: 170
+  Sensitivity: 140
   StandHeight: 1.6
   SeetHeight: 0.7
   HideCursor: 0

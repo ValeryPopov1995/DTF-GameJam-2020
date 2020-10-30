@@ -38,10 +38,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -162,15 +160,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13226}
     - Class: 114
-      Script: {instanceID: 13306}
+      Script: {instanceID: 13278}
     - Class: 114
       Script: {instanceID: 13308}
     - Class: 114
-      Script: {instanceID: 15912}
+      Script: {instanceID: 13310}
     - Class: 114
-      Script: {instanceID: 16026}
+      Script: {instanceID: 16018}
     - Class: 114
-      Script: {instanceID: 34642}
+      Script: {instanceID: 16142}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -771,6 +769,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VictoryAnimation
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestRunner.Utils
     className: TestRunCallbackListener
@@ -828,12 +832,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: VictoryAnimation
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainScene.unity
