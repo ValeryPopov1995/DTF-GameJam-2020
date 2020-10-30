@@ -68,10 +68,13 @@ public class PlayerMovenment : MonoBehaviour
         #endregion
 
         #region moving result
-        moveVector = transform.forward * speed * Input.GetAxis("Vertical") +
-            transform.right * speed * Input.GetAxis("Horizontal") +
-            transform.up * gravityVector;
-        character.Move(moveVector * Time.deltaTime);
+        if (!Cursor.visible)
+        {
+            moveVector = transform.forward * speed * Input.GetAxis("Vertical") +
+                transform.right * speed * Input.GetAxis("Horizontal") +
+                transform.up * gravityVector;
+            character.Move(moveVector * Time.deltaTime);
+        }
         #endregion
     }
 }

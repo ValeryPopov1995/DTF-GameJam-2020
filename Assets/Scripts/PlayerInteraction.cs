@@ -26,7 +26,7 @@ public class PlayerInteraction : MonoBehaviour
             // cursor image
 
             // click obj
-            if (obj != null)
+            if (obj != null && obj.isActive)
             {
                 cursor.SetActive(true);
 

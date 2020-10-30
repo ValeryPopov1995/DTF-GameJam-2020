@@ -30,4 +30,9 @@ public class PauseMenu : MonoBehaviour
     {
         Application.OpenURL(url);
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
